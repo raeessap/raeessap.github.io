@@ -5,8 +5,13 @@ icon: fas fa-download
 order: 1
 ---
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-<script src="{{ '/assets/js/jquery-3.3.1.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/sapmachine.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/jquery-3.3.1.min.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/sapmachine.js' | relative_url }}" defer></script>
+<script type="text/javascript" defer>
+  function sendDownloadEvent(target) {
+    window.location.href = target;
+  };
+</script>
 
 **SapMachine** is a distribution of the OpenJDK maintained by SAP. It is designed to be free, cross-platform, production-ready, and Java SE certified. This distribution serves as the default Java Runtime for SAP's numerous applications and services.
 
